@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+       <head>
+            <title> Lógica de programação Javascript</title>
+            <meta charset="utf8">
+       </head> 
+       <body>
+            <h1> Lógica de programação com Javascript</h1>
+
+            <script> 
+            
+   /*   Exercício 16 - Mostra anos bissextos, múltiplos de 100 não são bissextos, mas múltiplos de 400 são bissextos */
+               var ano = 1004;
+
+               while (ano <= 2025) {
+
+                    if (!(ano % 100 === 0) || (ano % 400 === 0)){
+                    document.write (ano + '<br>');
+                    
+               } else {
+                    document.write (ano + 'não é bissexto <br>')
+               }
+               ano = ano + 4
+
+               } 
+               
+               </script>
+
+       </body>
+</html>

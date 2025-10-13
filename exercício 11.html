@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html>
+       <head>
+            <title> Lógica de programação Javascript</title>
+            <meta charset="utf8">
+       </head> 
+       <body>
+            <h1> Lógica de programação com Javascript</h1>
+
+            <script> 
+            
+    /* Exercício 11 - Comparar números entre dois jogadores e sortear um terceiro que seja 0 ou 1. Se o número sorteado for 0, ganha quem escolheu o menor número, se o número sorteado for 1, ganha quem escolheu o número maior. */
+
+               n1 = parseFloat(prompt("O primeiro jogador escolhe um número"));
+               n2 = parseFloat(prompt("O segundo jogador escolhe um número"));
+              
+
+
+
+               if (n1 === n2){
+                    alert("Empate")
+               } else {
+                    var n3 = parseInt(Math.random()*2);
+               } if (n3 === 0) {
+                    if (n1 < n2) {
+                         alert ("Ganha o jogador 1");
+                    } else {
+                         alert ("Ganha o jogador 2");
+                    }
+               } else { 
+                    if (n1 > n2) {
+                         alert ("Ganha o jogador 1");
+                    } else {
+                         alert ("Ganha o jogador 2");
+                    }
+               } 
+               
+               </script>
+
+       </body>
+</html>
