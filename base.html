@@ -1,0 +1,240 @@
+<!DOCTYPE html> 
+<html>
+       <head>
+            <title> Lógica de programação Javascript</title>
+            <meta charset="utf8">
+       </head> 
+       <body>
+            <h1> Lógica de programação com Javascript</h1>
+
+            <script> 
+            
+              /* Exercício 1 - Soma de dois números
+              
+              var n1 = prompt ("Digite um número");
+               var n2 = prompt ("Digite outro número");
+               n1 = parseFloat(n1);
+               n2 = parseFloat(n2);
+               alert ("A soma dos números é " + (n1 + n2)); */
+
+              
+              /* Exercício 2 - Conversão em número inteiro 
+               
+               var n1 = prompt("Digite um número");
+               n1 = parseInt(n1);
+               alert (n1); */
+             
+               
+               /* Exercício 3 - Subtração entre dois números 
+
+               var n1 = prompt ("Digite um número");
+               var n2 = prompt ("Digite outro número");
+               n1 = parseFloat (n1);
+               n2 = parseFloat (n2);
+
+               alert ("A subtração entre os dois números é " + (n1 - n2)) */
+
+              
+               /* Exercício 4 = multiplicação entre dois números
+
+               n1 = prompt ("Digite um número");
+               n2 = prompt ("Digite outro número");
+               n1 = parseFloat (n1);
+               n2 = parseFloat (n2);
+               
+               alert ("A multiplicação entre os dois números é " + (n1 * n2)) */
+          
+               /* Exercício 5 - Divisão entre dois números 
+               n1 = prompt ("Digite um número");
+               n2 = prompt ("Digite outro número");
+               n1 = parseFloat (n1);
+               n2 = parseFloat (n2);
+               
+               alert ("A divisão entre os dois números é " + (n1 / n2)) */
+               
+              /* Exercício 6 - Média entre dois números 
+               
+               n1 = prompt ("Digite um número");
+               n2 = prompt ("Digite outro número");
+               n1 = parseFloat (n1);
+               n2 = parseFloat (n2);
+               alert ("A média entre os números é " + (((n1 + n2)/2))); */ 
+
+               
+               /* Exercício 7 - Resto de uma divisão  
+
+               var n1 = prompt ("Digite um número");
+               var n2 = prompt ("Digite outro número");
+               var n1 = parseFloat (n1);
+               var n2 = parseFloat (n2);
+               var n3 = n1 % n2;
+               var n3 = parseFloat (n3);
+               alert ("O resto da divisão entre os dois números é " + n3);  */ 
+
+              
+              /* Exercício 8 - Elevar um número a outro
+
+               var n1 = prompt ("Digite um número");
+               var n2 = prompt ("Digite outro número");
+               var n1 = parseFloat (n1);
+               var n2 = parseFloat (n2);
+               var n3 = n1 ** n2;
+               var n3 = parseFloat (n3);
+               alert ("O número " + n1 + " elevado a " + n2 + " é " + n3); */ 
+
+
+               /* Exercício 9 - Mostrar true ou false se a média for maior que 5
+
+               var n1 = prompt ("Digite um número");
+               var n2 = prompt ("Digite outro número");
+               var n1 = parseFloat (n1);
+               var n2 = parseFloat (n2);
+               var n3 = (n1 * n2) / 2;
+               alert (n3 > 5); */
+               
+
+               /* Exerício 10 - Mostrar se um aluno foi aprovado com base na média 
+
+               var n1 = parseFloat(prompt("Insira a primeira nota"));
+               var n2 = parseFloat(prompt("Insira a segunda nota"));
+               var media = (n1 + n2) / 2;
+               
+               
+
+               if (media >= 5 ) {
+                    alert ("Você foi aprovado")
+               } else {
+                    alert ("Você foi reprovado")
+               } */ 
+
+
+
+               /* Exercício 11 - Comparar números entre dois jogadores e sortear um terceiro que seja 0 ou 1. Se o número sorteado for 0, ganha quem escolheu o menor número, se o número sorteado for 1, ganha quem escolheu o número maior. 
+
+               n1 = parseFloat(prompt("O primeiro jogador escolhe um número"));
+               n2 = parseFloat(prompt("O segundo jogador escolhe um número"));
+              
+
+
+
+               if (n1 === n2){
+                    alert("Empate")
+               } else {
+                    var n3 = parseInt(Math.random()*2);
+               } if (n3 === 0) {
+                    if (n1 < n2) {
+                         alert ("Ganha o jogador 1");
+                    } else {
+                         alert ("Ganha o jogador 2");
+                    }
+               } else { 
+                    if (n1 > n2) {
+                         alert ("Ganha o jogador 1");
+                    } else {
+                         alert ("Ganha o jogador 2");
+                    }
+               } */ 
+
+
+               /* Exercício 12 - Pedir duas notas, se a média for maior ou igual a 5, está aprovado, mas se for menor e uma das notas for 0 é reprovado automaticamente.
+
+          var n1 = parseFloat(prompt("Digite a nota 1"));
+          var n2 = parseFloat(prompt("Digite a nota 2"));
+          var media = (n1+n2) / 2;
+
+          if (n1 > 0 && n2 > 0 && media >= 5) {
+
+               alert ("Você foi aprovado");
+
+          } else { 
+               alert ("Você foi reprovado");
+               } */
+                      
+                
+
+               /* Exercício 13 - O mesmo dos jogadores, mas com uma lógica mais suscinta
+
+            var n1 = parseFloat(prompt("O primeiro jogador escolhe um número"));
+              var n2 = parseFloat(prompt("O segundo jogador escolhe um número"));
+          
+               if (n1 === n2){
+                    alert("Empate")
+             
+               } else {
+               var n3 = parseInt(Math.random()*2); 
+                       alert ("Número sorteado " + n3)  
+               if ( (n3 === 0 && n1 < n2) || (n3 === 1 && n1 > n2)) {
+                    alert ("Ganhou o jogador 1");
+
+               } else {
+                    alert ("Ganhou o jogador 2");
+               }
+          } */ 
+
+          /* Exercício 14 - Switch case
+             
+          n = parseInt (prompt("Digite um número")); 
+
+               
+               switch (n){
+                    case 1: 
+                         alert ("vish");
+                    break;
+                    case 2: 
+                         alert ("interessante");
+                    break;
+                    case 3: 
+                         alert ("doideira");
+                    break;
+                    case 4:
+                         alert ("sem ideias");
+                    break; 
+                    case 5: 
+                          alert ("entendo")
+                    break;
+                    case 6: 
+                         alert ("finalmente");
+                    break 
+                         default : 
+                          alert ("digite um número entre 1 e 6");
+               } */ 
+
+             /*Exercício 15 - Tabuada até 1000 
+               
+               var n = parseFloat(prompt("Digite um número"))
+                    
+               var i = 1;
+
+               while (i <= 1000) {
+
+                    document.write (n + 'x' + i + ' = ' + n * i  +  '<br>');
+                    
+                    i = i + 1;
+
+               }
+                   document.write ("Saiu do loop"); */   
+               
+
+               
+                /*   Exercício 16 - Mostra anos bissextos, múltiplos de 100 não são bissextos, mas múltiplos de 400 são bissextos
+               var ano = 1004;
+
+               while (ano <= 2025) {
+
+                    if (!(ano % 100 === 0) || (ano % 400 === 0)){
+                    document.write (ano + '<br>');
+                    
+               } else {
+                    document.write (ano + 'não é bissexto <br>')
+               }
+               ano = ano + 4
+
+               } */
+               
+               
+
+          
+               </script>
+
+       </body>
+</html>
