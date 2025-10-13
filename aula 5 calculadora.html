@@ -12,6 +12,7 @@
      <button onclick="subtrair()">-</button>
      <button onclick="multiplicar()">x</button>
      <button onclick="dividir()">/</button>
+     <button onclick="porcentagem()"> % </button> 
      <div id = "output"> </div>
     
     <script> 
@@ -49,6 +50,13 @@
                 n1 = n1 / n; 
                 escreve();
     
+       }
+
+       function porcentagem () {
+                var n = parseFloat(prompt("Digite outro número"));
+                n1 = n1 * (n/100);
+                escreve()
+
        }
 
 
