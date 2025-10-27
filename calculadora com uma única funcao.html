@@ -1,71 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lógica de programação</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Simples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    #output {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Calculadora</h1>
+  <h1>Calculadora</h1>
 
-     <button onclick="calcular('+')">+</button>
-     <button onclick="calcular('-')">-</button>
-     <button onclick="calcular('*')">x</button>
-     <button onclick="calcular('/')">/</button>
-     <button onclick="calcular('%')"> % </button> 
-     <div id = "output"> </div>
-    
-    <script> 
-        
-        var n1 = parseFloat(prompt("Digite um número"));
-        //document.write (n)
-  
-        
+  <button onclick="calcular('+')">+</button>
+  <button onclick="calcular('-')">-</button>
+  <button onclick="calcular('*')">×</button>
+  <button onclick="calcular('/')">÷</button>
+  <button onclick="calcular('%')">%</button>
 
-        function escreve () {
-            var output = document.querySelector('#output');
-            output.innerHTML = n1;
-             
-         var mensagem = '';
-        }
-        
-        escreve();
+  <div id="output"></div>
 
-        function calcular (simbolo){
+  <script>
+    // Primeiro número digitado
+    var n1 = parseFloat(prompt("Digite o primeiro número:"));
 
-                var n = parseFloat(prompt("Digite um número"))
+    // Enquanto for inválido, pede novamente
+    while (isNaN(n1)) {
+      alert("Por favor, digite apenas números!");
+      n1 = parseFloat(prompt("Digite o primeiro número novamente:"));
+    }
 
-            
-                
+    // Mostra na tela
+    function escreve() {
+      document.querySelector('#output').innerHTML = "Número atual: " + n1;
+    }
 
-              switch (simbolo) {
+    escreve();
 
-                case '+':
-                     n1 += n;
+    // Função principal
+    function calcular(simbolo) {
+      var n = parseFloat(prompt("Digite outro número:"));
 
-                    break;
-                case '-':
-                   n1 -= n;
-                    break;
-                case '*':
-                 n1 *= n;
-                    break;
-                case '/':
-            n1 /= n;    
-                break;      
-              }
-              escreve();
-            }
-        
-    
-        
+      if (isNaN(n)) {
+        alert("Digite apenas números!");
+        return;
+      }
 
-       //Objetivo: Simplificar o código 
+      switch (simbolo) {
+        case '+': n1 += n; break;
+        case '-': n1 -= n; break;
+        case '*': n1 *= n; break;
+        case '/':
+          if (n === 0) {
+            alert("Não é possível dividir por zero!");
+            return;
+          }
+          n1 /= n;
+          break;
+        case '%': n1 %= n; break;
+      }
 
-
-
-
-
-    </script>
+      escreve(); // Atualiza a tela com o novo valor
+    }
+  </script>
 </body>
 </html>
